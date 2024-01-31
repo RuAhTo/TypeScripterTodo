@@ -1,0 +1,85 @@
+@import url(/src/modules/checkbox.css);
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  width: 100vw;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+nav{
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+.time, .date{
+  margin: 1rem;
+}
+.window{  
+  display: flex;
+  justify-content: center;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+button{
+  background: none;
+  border: none;
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 50%;
+  margin: 1rem;
+}
+.Notes{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.task{
+  margin: 0.5rem;
+  width: 20rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: .5rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.item{
+  display: flex;
+  align-items: center;
+}
+.remove{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  height: 16px;
+  aspect-ratio: 1;
+  padding: .3rem;
+
+}
+label{
+  height: min-content;
+  max-width: 232px;
+}

@@ -97,4 +97,4 @@ if (clear) {
       task.remove();
     });
   });
-}
+};

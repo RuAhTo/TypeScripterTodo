@@ -49,12 +49,8 @@ function addTask(checkboxId: string, labelText: string): void {
         (label as HTMLInputElement).focus();
     }
     if (label) {
-        if (label) {
-            if (label) {
-                (label as HTMLLabelElement).contentEditable = 'true';
-                (label as HTMLLabelElement).focus();
-            }
-        }
+        (label as HTMLLabelElement).contentEditable = 'true';
+        (label as HTMLLabelElement).focus();
     }
     }
   }
@@ -70,6 +66,18 @@ if (addBtn) {
 }
 
 if (noteContainer) {
+  // Event delegation for delete button
+  noteContainer.addEventListener("click", (event) => {
+    const deleteBtn = event.target as HTMLElement;
+    if (deleteBtn.classList.contains("remove") || deleteBtn.closest(".remove")) {
+      const task = deleteBtn.closest(".task");
+      if (task) {
+        task.remove();
+      }
+    }
+  });
+
+  // Event delegation for checkbox
   noteContainer.addEventListener("click", (event) => {
     const checkbox = event.target as HTMLInputElement;
     if (checkbox.type === "checkbox") {
@@ -80,14 +88,13 @@ if (noteContainer) {
     }
   });
 }
-if (noteContainer) {
-    noteContainer.addEventListener("click", (event) => {
-      const deleteBtn = event.target as HTMLElement;
-      if (deleteBtn.classList.contains("remove")) {
-        const task = deleteBtn.closest(".task");
-        if (task) {
-          task.remove();
-        }
-      }
+const clear = document.querySelector('#clearBtn');
+
+if (clear) {
+  clear.addEventListener('click', () => {
+    const tasks = document.querySelectorAll('.task');
+    tasks.forEach((task) => {
+      task.remove();
     });
-  }
+  });
+}

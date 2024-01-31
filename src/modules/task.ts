@@ -32,9 +32,9 @@ function addTask(checkboxId: string, labelText: string): void {
     });
 
     label.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === 'Tab') {
-        event.preventDefault();
-        label.blur();
+        if ((event as KeyboardEvent).key === 'Enter' || (event as KeyboardEvent).key === 'Tab') {
+            event.preventDefault();
+            (event.target as HTMLElement).blur();
         }
     });
 
@@ -43,11 +43,21 @@ function addTask(checkboxId: string, labelText: string): void {
         label.classList.remove('edited');
     });
 
-    label.focus();
-    label.select();
+    if (label) {
+        (label as HTMLInputElement).focus();
+    }
+        (label as HTMLInputElement).focus();
+    }
+    if (label) {
+        if (label) {
+            if (label) {
+                (label as HTMLLabelElement).contentEditable = 'true';
+                (label as HTMLLabelElement).focus();
+            }
+        }
+    }
     }
   }
-}
 
 function generateUniqueId(): string {
   return Date.now().toString();

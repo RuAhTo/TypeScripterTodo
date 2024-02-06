@@ -22,10 +22,10 @@
 
   .checkbox-wrapper-52 .item .cbx {
     position: relative;
-    top: 1px;
+    top: 0px;
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     margin-right: 6px;
     border: 1px solid #c8ccd4;
     border-radius: 3px;

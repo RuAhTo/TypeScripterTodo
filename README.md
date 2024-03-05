@@ -35,4 +35,4 @@ Detta projekt innehåller en att-göra-lista där varje uppgift har ett unikt ID
     npm run dev
     ```
 
-5. Öppna webbläsaren och gå till [http://localhost:3000](http://localhost:3000).
+5. Öppna i webbläsaren med din localhost länk.
